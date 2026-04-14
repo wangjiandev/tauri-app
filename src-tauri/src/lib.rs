@@ -31,6 +31,7 @@ pub fn run() {
                 .show_menu_on_left_click(false)
                 .tooltip("我的应用")
                 .icon(tray_icon)
+                .icon_as_template(true)
                 .on_menu_event(|app, event| match event.id.as_ref() {
                     "show" => {
                         if let Some(window) = app.get_webview_window("main") {
