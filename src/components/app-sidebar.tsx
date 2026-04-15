@@ -84,7 +84,7 @@ const data = {
         },
         {
           title: "服务器设置",
-          url: "#",
+          url: "/settings/server-info",
         },
       ],
     },
@@ -128,9 +128,11 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
         <NavSecondary items={data.navSecondary} className="mt-auto" />
       </SidebarContent>
       <SidebarFooter>
-        <span className="text-sm text-center text-muted-foreground p-2">
+        <span className="text-xs text-muted-foreground p-2">
           版权所有 &copy; 2026 <br />
-          <span className="font-medium">山东得之信息科技有限公司</span>
+          <span className="font-medium text-primary">
+            山东得之信息科技有限公司
+          </span>
         </span>
       </SidebarFooter>
     </Sidebar>
