@@ -25,7 +25,8 @@ pub fn run() {
         .plugin(tauri_plugin_opener::init())
         .invoke_handler(tauri::generate_handler![
             commands::greet,
-            commands::save_redis_config
+            commands::save_redis_config,
+            commands::get_redis_status
         ])
         .run(tauri::generate_context!())
         .expect("error while running tauri application");

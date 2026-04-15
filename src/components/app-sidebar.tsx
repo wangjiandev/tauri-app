@@ -4,7 +4,6 @@ import * as React from "react";
 
 import { NavMain } from "@/components/nav-main";
 import { NavSecondary } from "@/components/nav-secondary";
-import { NavUser } from "@/components/nav-user";
 import {
   Sidebar,
   SidebarContent,
@@ -20,12 +19,10 @@ import {
   Settings2Icon,
   LifeBuoyIcon,
   SendIcon,
-  FrameIcon,
-  PieChartIcon,
-  MapIcon,
   TerminalIcon,
 } from "lucide-react";
 import { Link } from "@tanstack/react-router";
+import { NavFooter } from "@/components/nav-footer";
 
 const data = {
   user: {
@@ -128,12 +125,7 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
         <NavSecondary items={data.navSecondary} className="mt-auto" />
       </SidebarContent>
       <SidebarFooter>
-        <span className="text-xs text-muted-foreground p-2">
-          版权所有 &copy; 2026 <br />
-          <span className="font-medium text-primary">
-            山东得之信息科技有限公司
-          </span>
-        </span>
+        <NavFooter />
       </SidebarFooter>
     </Sidebar>
   );
